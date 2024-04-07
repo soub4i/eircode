@@ -36,7 +36,7 @@ jobs:
           GOOS=windows GOARCH=amd64 go build -o dist/eircode-windows-amd64.exe main.go
 
       - name: Archive build files
-        run: cd dist && tar -czvf build.tar.gz eircode
+        run: cd dist && tar -czvf build.tar.gz *
 
       - name: Copy build-artifacts
         uses: skx/github-action-publish-binaries@master
